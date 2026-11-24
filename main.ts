@@ -4,7 +4,7 @@ import { join } from "node:path";
 const MAX_CHARS = 200;
 
 const JOKE =
-  "My boss promised we'd negotiate my raise as equals, then sat me in the one office chair that slowly sinks.";
+  'My predecessor carved "HELP" under my office desk, and six months in I\'m still too embarrassed to ask what it stands for.';
 
 function validateJoke(text: string): string {
   const charCount = [...text].length;
