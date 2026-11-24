@@ -3,8 +3,8 @@ import { join } from "node:path";
 
 const MAX_CHARS = 200;
 
-// Draft placeholder; will be replaced with the verified tournament champion.
-const JOKE = "Draft placeholder pending pairwise tournament selection.";
+const JOKE =
+  "My boss promised we'd negotiate my raise as equals, then sat me in the one office chair that slowly sinks.";
 
 function validateJoke(text: string): string {
   const charCount = [...text].length;
@@ -21,7 +21,7 @@ function validateJoke(text: string): string {
 }
 
 function main(): void {
-  const outputDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
+  const outputDir = process.env.MAKEFUN_OUTPUT_DIR || "/output";
   const entry = validateJoke(JOKE);
   mkdirSync(outputDir, { recursive: true });
   writeFileSync(join(outputDir, "entry.txt"), entry, { encoding: "utf8" });
